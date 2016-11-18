@@ -1,11 +1,12 @@
 body { margin:0;
     background-color: #ffffff;}
+
 #container { background-color: #eeeeee;
     color: #006600;
     min-width: 960px;
     font-family:Verdana,Arial, sans-serif;}
 #header { background-color: #636631;
-    background-image: url(showybg.jpg);
+    background-image: url(http://www.batuulis.se/images/Startsida/DSC_0016.jpg);
     background-position: bottom;
     background-repeat:repeat-x;
     height: 120px;
@@ -27,3 +28,6 @@ body { margin:0;
     background-color: #ffffff;
     padding-top: 10px;
     clear: both;}
+a {color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;}

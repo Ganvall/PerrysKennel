@@ -1,7 +1,19 @@
 body { background: #666; }
-#page-wrap:after { content: "Medium Layout"; }
 #main-content { float: right; width: 440px; height: 300px; }
 #secondary-one { float: left; width: 170px; height: 300px; }
 #secondary-two { display: none; }
-#nav { float: right;
-    width: 150px;}
+#nav {  height: 30px;
+    width: auto;
+    float: none;
+    text-align:center;
+    padding: 0 20px;
+    border-bottom: 2px solid #000000;}
+ul#menu li {display:inline;
+            margin-right: 10px;
+            margin-left: 10px;}
+#center { margin-left: 0;
+    margin-right: 220px;
+    padding: 1px 10px 20px 10px;
+    background-color: #ffffff;
+    color: #006600;}
+#footer {margin-bottom: 0px;}
