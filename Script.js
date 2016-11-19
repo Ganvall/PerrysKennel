@@ -3,18 +3,12 @@
  */
 
 window.onload = setDate();
-window.onload = setLastChanged();
+
 
 
 
 function setDate() {
-    document.getElementById("time").innerHTML=Date();
-    console.log("varför");
+    document.getElementById("time").innerHTML="Current time: " + Date() + ". Page Last changed: " + document.lastModified;
 }
 
-function setLastChanged() {
-    var x = document.lastModified;
-    document.getElementById("lastchanged").innerHTML= x;
-    console.log(document.lastModified)
-}
 
