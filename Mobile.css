@@ -11,6 +11,10 @@ select {
 }
 
 
+#dogz {
+    display: none;
+}
+
 #nav {  height: 30px;
     width: auto;
     float: none;
