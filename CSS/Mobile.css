@@ -34,7 +34,9 @@ ul#menu li {display:inline;
     margin-right: 0px;
     padding: 1px 10px 20px 10px;
     background-color: #ffffff;
-    color: #006600;}
+    color: #006600;
+    height: 81vh;}
+
 #footer {margin-bottom: 0px;}
 
 #header { background-color: lightsteelblue;
