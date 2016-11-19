@@ -5,7 +5,6 @@
     <link rel='stylesheet' media='screen and (max-width: 768px)' href='Mobile.css' />
     <link rel='stylesheet' media='screen and (min-width: 769px) and (max-width: 1024px)' href='Tablet.css' />
     <link rel='stylesheet' media='screen and (min-width: 1025px)' href='General.css' />
-
     <title>Perrys Kennel</title>
     <meta charset="utf-8">
 </head>
@@ -17,7 +16,7 @@
     </div>
     <div id="nav">
         <ul id="menu">
-            <li><a href="index.html">HEM</a></li>
+            <li><a href="Home.html">HEM</a></li>
             <li><a href="minahundar.html">MINA HUNDAR</a></li>
             <li><a href="kennel.html">KENNEL</a></li>
             <li><a href="hundskola.html">HUNDSKOLA</a></li>
@@ -25,12 +24,23 @@
             <li><a href="gästbok.html">GÄSTBOK</a></li>
             <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
+
+        <select onchange="location = this.options[this.selectedIndex].value;">
+            <option value="Home.html">HEM</option>
+            <option value="minahundar.html">MINA HUNDAR</option>
+            <option value="kennel.html">KENNEL</option>
+            <option value="hundskola.html">HUNDSKOLA</option>
+            <option value="bildgalleri.html">BILDGALLERI</option>
+            <option value="gästbok.html">GÄSTBOK</option>
+            <option value="kontakt.html">KONTAKT</option>
+        </select>
+
+
     </div>
     <div id="sidebar">
-        <h3>The Ridges</h3>
+        <h3>NYHETER OSV</h3>
         <p class="news">
         </p>
-        NYHETER OSV
     </div>
     <div id="center">
         <h2>Perrys Kennel</h2>

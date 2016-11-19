@@ -1,2 +1,48 @@
-body { background: #333; }
-#secondary-two { display: none; }
+body { background: #666; }
+
+ul {
+    display: none
+}
+
+select {
+    display: table;
+    margin-left: 30px;
+    width: 200px;
+}
+
+
+#nav {  height: 30px;
+    width: auto;
+    float: none;
+    text-align:left;
+    padding: 0 2px;
+    border-bottom: 2px solid #000000;}
+
+#sidebar { float:right;
+    width: 240px;
+    display: none;}
+
+ul#menu li {display:inline;
+    margin-right: 10px;
+    margin-left: 10px;}
+
+#center { margin-left: 0;
+    margin-right: 0px;
+    padding: 1px 10px 20px 10px;
+    background-color: #ffffff;
+    color: #006600;}
+#footer {margin-bottom: 0px;}
+
+#header { background-color: lightsteelblue;
+    background-image: none;
+    height: 80px;
+    width: 100%;
+    color: black;
+    text-align:left;
+    padding: 0 30px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
