@@ -16,6 +16,14 @@ h1 {font-family:Georgia,serif;
     color:#ffffff;
     font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;}
 
+h2 {font-family:Georgia,serif;
+    color:#777777;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    }
+
+
 a {color: lightgray;
     font-family:Georgia,serif;
     text-decoration: none;}
@@ -64,17 +72,29 @@ select {
     }
 
 #sidebar { float:right;
-    width: 240px;}
+    width: 300px;
+    color: #777777;}
+
+#sidebar img {
+    width: 170px;
+    height: 110px;
+    float: none;
+    border: 1px solid #777777;
+    margin-left: 15%;
+    margin-right: 25%;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
 
 #center {
     margin-top: 0;
-    margin-right: 250px;
+    margin-right: 310px;
     margin-left: 160px;
     margin-bottom: 0;
     padding: 1px 10px 20px 10px;
     background-color: #ffffff;
     height: 81%;
-    color: #006600;
+    color: #777777;
     width: inherit;}
 
 #center img {
@@ -86,7 +106,6 @@ select {
     margin-right: 20px;
     margin-bottom: 20px;
 }
-
 
 select {
     -webkit-appearance: none;
