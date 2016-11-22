@@ -15,7 +15,7 @@ body { background: #fafafa }
     text-decoration: none;
     color: #777777;
     display: block;
-    margin-left: 0px;
+    margin-left: 5px;
 }
 #buttons li a:hover {
     text-decoration: none;
