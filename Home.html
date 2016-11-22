@@ -16,7 +16,7 @@
         <h1>Perrys Kennel</h1>
     </div>
     <div id="nav">
-        <ul id="menu">
+        <ul id="buttons">
             <li><a href="Home.html">HEM</a></li>
             <li><a href="minahundar.html">MINA HUNDAR</a></li>
             <li><a href="kennel.html">KENNEL</a></li>
@@ -26,15 +26,14 @@
             <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
 
-        <select onchange="location = this.options[this.selectedIndex].value;">
-            <option value="Home.html">HEM</option>
-            <option value="minahundar.html">MINA HUNDAR</option>
-            <option value="kennel.html">KENNEL</option>
-            <option value="hundskola.html">HUNDSKOLA</option>
-            <option value="bildgalleri.html">BILDGALLERI</option>
-            <option value="gästbok.html">GÄSTBOK</option>
-            <option value="kontakt.html">KONTAKT</option>
-        </select>
+        <div class="dropdown">
+            <button onclick="toggleMenu()" class="dropbtn"> MENY</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
 
 
     </div>

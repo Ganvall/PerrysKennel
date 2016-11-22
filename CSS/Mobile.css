@@ -1,15 +1,21 @@
-body { background: #666; }
+body { background: #fafafa }
 
 ul {
     display: none
 }
 
 select {
-    display: table;
+    display: none;
     margin-left: 30px;
     width: 200px;
 }
 
+.dropbtn {
+    display: block;
+}
+#myDropdown {
+    font-size: 20px;
+}
 
 #dogz {
     display: none;
@@ -19,8 +25,7 @@ select {
     width: auto;
     float: none;
     text-align:left;
-    padding: 0 2px;
-    border-bottom: 2px solid #000000;}
+    padding: 0 2px;  }
 
 #sidebar { float:right;
     width: 240px;
@@ -46,9 +51,7 @@ ul#menu li {display:inline;
     color: black;
     text-align:left;
     padding: 0 30px;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #000000;
     margin-left: auto;
     margin-right: auto;
 }
+
