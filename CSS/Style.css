@@ -93,9 +93,9 @@ select {
     margin-bottom: 0;
     padding: 1px 10px 20px 10px;
     background-color: #ffffff;
-    height: 81%;
+    min-height: 600px;
     color: #777777;
-    width: inherit;}
+    width: auto;}
 
 #center img {
     width: 150px;

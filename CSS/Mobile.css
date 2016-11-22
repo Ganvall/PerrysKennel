@@ -40,7 +40,7 @@ ul#menu li {display:inline;
     padding: 1px 10px 20px 10px;
     background-color: #ffffff;
     color: #006600;
-    height: 81vh;}
+    min-height: 570px;}
 
 #footer {margin-bottom: 0px;}
 

@@ -47,6 +47,6 @@ ul {
     padding: 1px 10px 20px 10px;
     background-color: #ffffff;
     color: #777777;
-    height: 81vh;}
+    min-height: 530px;}
 
 #footer {margin-bottom: 0px;}
