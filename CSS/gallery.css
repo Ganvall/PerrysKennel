@@ -53,7 +53,8 @@
         text-align: center;
     }
 .gallery img {
-    height: 150px;
+    height: 150px !important;
+    width: auto !important;
     margin-left: 10px;
-    border: 1px solid #777777;
+    border: 1px solid black;
 }
