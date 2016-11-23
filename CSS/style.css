@@ -57,10 +57,12 @@ select {
     font-family:Verdana,Arial, sans-serif;}
 
 #header { background-color: #636631;
-    background: url(http://images.summitpost.org/original/849127.JPG) 100% 100%;
+    background: url(../images/äng.JPG);
+    background-size: 100% 100%;
     background-position: 25%;
     background-repeat:no-repeat;
-    height: 120px;
+    position: relative;
+    height: 140px;
     width: 100%;
     color: black;
     text-align:left;
