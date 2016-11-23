@@ -6,7 +6,7 @@ body { background: #fafafa }
     list-style: none;
     text-align: center;
     background-color: #fafafa;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-top: auto;
     width: auto;
     line-height: 30px;
@@ -16,7 +16,7 @@ body { background: #fafafa }
     font-size: 11px ;
     color: #777777;
     display: block;
-    margin-left: 1px;
+    margin: auto;
     min-width: 90px;
 }
 #buttons li a:hover {
