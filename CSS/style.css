@@ -15,7 +15,11 @@ body { margin:0;
 h1 {font-family:Georgia,serif;
     color:#ffffff;
     font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;}
-
+h1 a{
+    font-family:Georgia,serif;
+    color:#ffffff;
+    font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+}
 h2 {font-family:Georgia,serif;
     color:#777777;
     font-weight: 100;
@@ -58,11 +62,11 @@ select {
 
 #header { background-color: #636631;
     background: url(../images/äng.JPG);
-    background-size: 100% 100%;
-    background-position: 25%;
+    background-size: 100% auto;
+    background-position: 25% 37%;
     background-repeat:no-repeat;
     position: relative;
-    height: 140px;
+    height: 160px;
     width: 100%;
     color: black;
     text-align:left;
