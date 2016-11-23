@@ -40,7 +40,9 @@ ul {
     text-align:center;
     padding: 0 20px;
 }
-
+#sidebar img {
+  display: none;
+}
 
 #center { margin-left: 0;
     margin-right: 310px;
