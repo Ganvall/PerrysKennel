@@ -28,6 +28,9 @@ h2 {font-family:Georgia,serif;
 a {color: lightgray;
     font-family:Georgia,serif;
     text-decoration: none;}
+#selected {
+    background-color: dodgerblue;
+}
 
 a:hover {color:ivory;}
 
