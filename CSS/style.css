@@ -27,6 +27,13 @@ h2 {font-family:Georgia,serif;
     margin-left: 5px;
     text-align: left;
     }
+hr {
+    color: lightskyblue;
+    background-color: lightskyblue;
+    height: 2px;
+    border: none;
+    width: 85%;
+}
 
 
 a {color: lightgray;
@@ -66,14 +73,14 @@ select {
     background-position: 25% 37%;
     background-repeat:no-repeat;
     position: relative;
-    height: 160px;
+    height: 200px;
     width: 100%;
     color: black;
     text-align:left;
     padding: 0 30px;
-    border-bottom-width: 1px;
+    border-bottom-width: 5px;
     border-bottom-style: solid;
-    border-bottom-color: #777777;
+    border-bottom-color: lightskyblue;
     margin-left: auto;
     margin-right: auto;
 }
