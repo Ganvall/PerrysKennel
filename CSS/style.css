@@ -151,9 +151,10 @@ select {
     cursor: pointer;
     height: 28px;
     margin-left: 0px;
-    width: 130px;
+    width: 100%;
     font-family:Georgia,serif;
     display: none;
+
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -164,6 +165,8 @@ select {
 .dropdown {
     position: relative;
     display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .dropdown-content {
@@ -177,6 +180,7 @@ select {
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
 }
 
 .dropdown-content a {

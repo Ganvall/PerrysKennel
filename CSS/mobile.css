@@ -33,7 +33,9 @@ select {
     width: auto;
     float: none;
     text-align:left;
-    padding: 0 2px;  }
+    padding: 0 0;
+
+}
 
 #sidebar { float:right;
     width: 240px;
