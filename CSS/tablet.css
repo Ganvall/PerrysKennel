@@ -41,6 +41,9 @@ ul {
     float: none;
     text-align:center;
     padding: 0 20px;
+    margin-left: 13%;
+    margin-right: 0%;
+
 }
 #sidebar img {
   display: none;
