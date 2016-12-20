@@ -22,7 +22,7 @@
             <li><a href="kennel.html">KENNEL</a></li>
             <li><a href="hundskola.html">HUNDSKOLA</a></li>
             <li><a href="bildgalleri.html">BILDGALLERI</a></li>
-            <li><a style="background-color: lightskyblue" href="gästbok.html">GÄSTBOK</a></li>
+            <li><a style="background-color: lightskyblue" href="guestbook.php">GÄSTBOK</a></li>
             <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
         <div class="dropdown">
@@ -33,7 +33,7 @@
                 <a href="kennel.html">KENNEL</a>
                 <a href="hundskola.html">HUNDSKOLA</a>
                 <a href="bildgalleri.html">BILDGALLERI</a>
-                <a style="background-color: lightskyblue" href="gästbok.html">GÄSTBOK</a>
+                <a style="background-color: lightskyblue" href="guestbook.php">GÄSTBOK</a>
                 <a href="kontakt.html">KONTAKT</a>
             </div>
         </div>
@@ -51,8 +51,12 @@
     </div>
     <div id="center">
 
-        <h2>Gästbok</h2>
-        <p>gässtboken.</p>
+        <form action="guestbook.php" method="get">
+            Name: <input type="text" name="name"><br>
+            E-mail: <input type="email" name="email"><br>
+            Message: <textarea cols="50" name="message" rows="10"> </textarea><br>
+            <input type="submit">
+        </form>
 
     </div>
     <div id="footer">

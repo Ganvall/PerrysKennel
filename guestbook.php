@@ -18,22 +18,22 @@
     <div id="nav">
         <ul id="buttons">
             <li><a href="index.html">HEM</a></li>
-            <li><a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a></li>
+            <li><a href="minahundar.html">MINA HUNDAR</a></li>
             <li><a href="kennel.html">KENNEL</a></li>
             <li><a href="hundskola.html">HUNDSKOLA</a></li>
             <li><a href="bildgalleri.html">BILDGALLERI</a></li>
-            <li><a href="guestbook.php">GÄSTBOK</a></li>
+            <li><a style="background-color: lightskyblue" href="gästbok.php">GÄSTBOK</a></li>
             <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
         <div class="dropdown">
             <button onclick="toggleMenu()" class="dropbtn"> MENY</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="index.html">HEM</a>
-                <a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a>
+                <a href="minahundar.html">MINA HUNDAR</a>
                 <a href="kennel.html">KENNEL</a>
                 <a href="hundskola.html">HUNDSKOLA</a>
                 <a href="bildgalleri.html">BILDGALLERI</a>
-                <a href="guestbook.php">GÄSTBOK</a>
+                <a style="background-color: lightskyblue" href="gästbok.php">GÄSTBOK</a>
                 <a href="kontakt.html">KONTAKT</a>
             </div>
         </div>
@@ -50,10 +50,51 @@
 
     </div>
     <div id="center">
+        <h2>Gästbok</h2>
+        <form action="guestbook.php" method="get">
+            Name:<br> <input type="text" name="name"><br><br>
+            E-mail:<br> <input type="email" name="email"><br><br>
+            Message: <br><textarea cols="50" name="message" rows="10"> </textarea><br><br>
+            <input type="submit" name="button">
+        </form>
+        <br>
 
-        <h2>Mina hunder</h2>
-        <img src="images/THEA.png" id="dogz">
-        <p>Mira är min favorit</p>
+        <?php
+        $host="localhost"; //Add your SQL Server host here
+        $user="root"; //SQL Username
+        $pass="hej123"; //SQL   Password
+        $dbname="phpskit"; //SQL Database Name
+        $con=mysqli_connect($host,$user,$pass,$dbname);
+
+        if ($con->connect_error) {
+            die("Connection failed: " . $con->connect_error);
+        }
+
+        if (isset($_GET['button'])) {
+            $name = $_GET['name'];
+            $email = $_GET['email'];
+            $message = $_GET['message'];
+            $sql = "INSERT INTO guestbook(name,email,message) VALUES('$name','$email','$message')";
+
+            if ($con->query($sql) === TRUE) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $con->error;
+            }
+        }
+        $result = mysqli_query($con,"SELECT name,email,message FROM guestbook");
+        while($row = mysqli_fetch_array($result))
+        { ?>
+
+            <hr>
+            <p> Posted by <b><?php echo $row['name']; ?></b></p>
+            <p> From email: <?php echo $row['email']; ?></p>
+            <p><?php echo $row['message']; ?></p>
+            </p>
+
+        <?php }
+        mysqli_close($con);
+        ?>
 
     </div>
     <div id="footer">
@@ -63,4 +104,5 @@
 </body>
 <script src="JS/Script.js"></script>
 </html>
+
 
