@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include 'connection.php';
+?>
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -7,7 +10,6 @@
     <link rel='stylesheet' media='screen and (min-width: 1025px)' href='CSS/general.css' />
     <title>Perrys Kennel</title>
     <meta charset="utf-8">
-
 </head>
 <body>
 <div id="page-wrap">
@@ -18,26 +20,25 @@
     <div id="nav">
         <ul id="buttons">
             <li><a href="index.html">HEM</a></li>
-            <li><a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a></li>
+            <li><a href="minahundar.html">MINA HUNDAR</a></li>
             <li><a href="kennel.html">KENNEL</a></li>
             <li><a href="hundskola.html">HUNDSKOLA</a></li>
             <li><a href="bildgalleri.html">BILDGALLERI</a></li>
             <li><a href="guestbook.php">GÄSTBOK</a></li>
-            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li><a style="background-color: lightskyblue" href="kontakt.html">KONTAKT</a></li>
         </ul>
         <div class="dropdown">
             <button onclick="toggleMenu()" class="dropbtn"> MENY</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="index.html">HEM</a>
-                <a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a>
+                <a href="minahundar.html">MINA HUNDAR</a>
                 <a href="kennel.html">KENNEL</a>
                 <a href="hundskola.html">HUNDSKOLA</a>
                 <a href="bildgalleri.html">BILDGALLERI</a>
                 <a href="guestbook.php">GÄSTBOK</a>
-                <a href="kontakt.html">KONTAKT</a>
+                <a style="background-color: lightskyblue" href="kontakt.html">KONTAKT</a>
             </div>
         </div>
-
 
     </div>
     <div id="sidebar">
@@ -51,10 +52,32 @@
     </div>
     <div id="center">
 
-        <h2>Mina hunder</h2>
-        <img src="images/THEA.png" id="dogz">
-        <p>Mira är min favorit</p>
+        <h2>Kontakt</h2>
+        <img src="images/mira_och_husse.jpg">
+        <p>Adress: Kongsmarken 293, Genarp</p>
+        <p>Telefon: 040441175</p>
+        <br><br><br><br><br><br><br><br><br><br>
 
+        <form action="contact.php" method="get">
+            Name:<br> <input type="text" name="name"><br><br>
+            E-mail:<br> <input type="email" name="email"><br><br>
+            Message: <br><textarea cols="50" name="message" rows="10"> </textarea><br><br>
+            <input type="submit" name="contactbutton">
+        </form>
+        <br>
+        <?php
+            if (isset($_GET["contactbutton"])) {
+                $name = $_GET["name"];
+                $email = $_GET["email"];
+                $message = $_GET["message"];
+                $sql = "INSERT INTO email(name,email,message) VALUES('$name','$email','$message')";
+                if ($con->query($sql) === TRUE) {
+                    echo "Tack!";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $con->error;
+                }
+            }
+        ?>
     </div>
     <div id="footer">
         <p id="time"></p>
@@ -63,4 +86,3 @@
 </body>
 <script src="JS/Script.js"></script>
 </html>
-

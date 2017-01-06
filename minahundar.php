@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<?php
+$host="localhost"; //Add your SQL Server host here
+$user="root"; //SQL Username
+$pass="hej123"; //SQL   Password
+$dbname="phpskit"; //SQL Database Name
+$con=mysqli_connect($host,$user,$pass,$dbname);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+?>
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -18,27 +28,25 @@
     <div id="nav">
         <ul id="buttons">
             <li><a href="index.html">HEM</a></li>
-            <li><a href="minahundar.html">MINA HUNDAR</a></li>
+            <li><a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a></li>
             <li><a href="kennel.html">KENNEL</a></li>
             <li><a href="hundskola.html">HUNDSKOLA</a></li>
             <li><a href="bildgalleri.html">BILDGALLERI</a></li>
-            <li><a style="background-color: lightskyblue" href="guestbook.php">GÄSTBOK</a></li>
+            <li><a href="guestbook.php">GÄSTBOK</a></li>
             <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
         <div class="dropdown">
             <button onclick="toggleMenu()" class="dropbtn"> MENY</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="index.html">HEM</a>
-                <a href="minahundar.html">MINA HUNDAR</a>
+                <a style="background-color: lightskyblue" href="minahundar.html">MINA HUNDAR</a>
                 <a href="kennel.html">KENNEL</a>
                 <a href="hundskola.html">HUNDSKOLA</a>
                 <a href="bildgalleri.html">BILDGALLERI</a>
-                <a style="background-color: lightskyblue" href="guestbook.php">GÄSTBOK</a>
+                <a href="guestbook.php">GÄSTBOK</a>
                 <a href="kontakt.html">KONTAKT</a>
             </div>
         </div>
-
-
     </div>
     <div id="sidebar">
         <h2>Nyheter osv</h2>
@@ -50,14 +58,19 @@
 
     </div>
     <div id="center">
-
-        <form action="guestbook.php" method="get">
-            Name: <input type="text" name="name"><br>
-            E-mail: <input type="email" name="email"><br>
-            Message: <textarea cols="50" name="message" rows="10"> </textarea><br>
-            <input type="submit">
-        </form>
-
+        <h2>Mina hundar</h2>
+        <hr>
+        <?php
+        $result = mysqli_query($con,"SELECT name,picturepath,information FROM dog");
+        while($row = mysqli_fetch_array($result))
+        { ?>
+            <p><h3><?php echo $row['name']; ?></h3></b>
+            <p><img src="<?php echo $row['picturepath']; ?>" id="dogz"></p>
+            <p><?php echo $row['information']; ?></p>
+            <hr>
+        <?php }
+        mysqli_close($con);
+        ?>
     </div>
     <div id="footer">
         <p id="time"></p>
